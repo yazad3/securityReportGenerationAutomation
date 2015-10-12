@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2015-10-08T22:18:42 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InterimReport20151006" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f450974-2235-4e04-b547-522cfc3b09e1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Bug Tracker CSV Data Source"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="TICKET CODE:" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Related Tickets" class="java.lang.String"/>
+	<field name="FOUND BY:" class="java.lang.String"/>
+	<field name="ON DATE:" class="java.lang.String"/>
+	<field name="USING OS:" class="java.lang.String"/>
+	<field name="USING BROWSER:" class="java.lang.String"/>
+	<field name="USING TOOL:" class="java.lang.String"/>
+	<field name="BUG TYPE:" class="java.lang.String"/>
+	<field name="CATEGORY:" class="java.lang.String"/>
+	<field name="BUG TITLE:" class="java.lang.String"/>
+	<field name="BUG DESCRIPTION:" class="java.lang.String"/>
+	<field name="STEPS TO REPRODUCE:" class="java.lang.String"/>
+	<field name="RECOMMENDATION:" class="java.lang.String"/>
+	<field name="Environment" class="java.lang.String"/>
+	<field name="LOCATION/URL:" class="java.lang.String"/>
+	<field name="CVSS v2 RATING:" class="java.lang.String"/>
+	<field name="CVSSv2 Vector" class="java.lang.String"/>
+	<field name="LINK TO SCREENSHOT-1:" class="java.lang.String"/>
+	<field name="LINK TO SCREENSHOT-2:" class="java.lang.String"/>
+	<field name="LINK TO SCREENSHOT-3:" class="java.lang.String"/>
+	<field name="LINK TO LOG OR REPORT FILE-1:" class="java.lang.String"/>
+	<field name="LINK TO LOG OR REPORT FILE-2:" class="java.lang.String"/>
+	<field name="LINK TO MISC FILE:" class="java.lang.String"/>
+	<field name="NOTES:" class="java.lang.String"/>
+	<field name="References" class="java.lang.String"/>
+	<field name="MF_Additional_Reference" class="java.lang.String"/>
+	<field name="MF_IMG_PATH_1" class="java.lang.String"/>
+	<field name="MF_IMG_PATH_2" class="java.lang.String"/>
+	<field name="MF_IMG_PATH_3" class="java.lang.String"/>
+	<field name="MF_NORMALIZED_CVSSv2_RATING" class="java.lang.String"/>
+	<sortField name="cvssv2RatingNormalizedAsDouble" order="Descending" type="Variable"/>
+	<variable name="cvssv2RatingNormalizedAsDouble" class="java.lang.Double">
+		<variableExpression><![CDATA[Double.valueOf($F{MF_NORMALIZED_CVSSv2_RATING})]]></variableExpression>
+	</variable>
+	<group name="Group1"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="10" width="550" height="50" uuid="1cb7304b-5178-4856-8c0d-75d8d11a8937"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="32" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Detailed Findings"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="560" height="19" uuid="37fc11e7-2029-4974-be44-15dd4b480917"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Confidential"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="172" splitType="Stretch">
+			<staticText>
+				<reportElement key="" x="342" y="11" width="83" height="19" uuid="5b450e03-39f4-402b-b40b-b8155a2d7563">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ticket Type:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" mode="Opaque" x="89" y="11" width="131" height="19" backcolor="#C8C8C8" uuid="2ac970a9-08b1-49ff-a525-226ceb369b8f"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Ticket Title:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" x="90" y="42" width="130" height="19" uuid="5ea5f3f9-c255-436d-9cd9-cd6e70e03b42">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Title:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" x="92" y="132" width="128" height="19" uuid="37eb1001-a596-48eb-a742-c65fe88baa79"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" x="90" y="77" width="99" height="19" uuid="8bf4b529-2c40-4721-96fa-c2f23087bdb6"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Related Tickets:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="425" y="11" width="107" height="19" uuid="349afa22-dd16-444b-8af8-e78708829a56">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Cambria" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BUG TYPE:}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="220" y="11" width="100" height="19" backcolor="#C8C8C8" uuid="7479e547-de60-4621-b34f-42cd52e54f83">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TICKET CODE:}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="42" width="312" height="30" uuid="aff0b897-2de9-4e3d-ae32-34e33cc77f58"/>
+				<textFieldExpression><![CDATA[$F{BUG TITLE:}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="92" y="151" width="440" height="19" uuid="fe616b91-8186-41b3-8ba5-13c24e1130db"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BUG DESCRIPTION:}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="" x="206" y="77" width="99" height="19" uuid="b1c95de2-be72-4128-9d18-8a387a10945f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Environments:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" x="322" y="77" width="99" height="19" uuid="aae03054-8398-449d-8da3-33955f4229b7">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CVSSv2 Rating:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" x="436" y="77" width="96" height="19" uuid="32b32777-25d1-4be5-a196-d6288b704eda">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CVSSv2 Vector:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="96" width="100" height="30" uuid="24b831a0-0656-4297-a914-76bca026dcf3"/>
+				<textFieldExpression><![CDATA[$F{Related Tickets}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="206" y="96" width="100" height="30" uuid="a19bdeac-e3b9-40d5-bb5c-25b48a8768ae"/>
+				<textFieldExpression><![CDATA[$F{Environment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="96" width="100" height="30" uuid="7b4cc419-6d4c-4fef-8123-9119dde34389">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CVSS v2 RATING:}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="436" y="96" width="96" height="30" uuid="9684ae1d-2547-4a86-8400-affaaeaa5dd2">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CVSSv2 Vector}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="119">
+			<staticText>
+				<reportElement key="" x="92" y="7" width="130" height="19" uuid="912189aa-ba62-41ee-96a6-99aa65a62389"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Steps to Reproduce:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="92" y="86" width="440" height="19" uuid="d15d8623-b460-4f75-97fb-aa9f2d72c7a2">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{STEPS TO REPRODUCE:}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="50" width="377" height="30" uuid="b924c9cb-ae6e-43b1-97bf-0a155fdcdbdc">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{LOCATION/URL:}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="28" width="232" height="19" uuid="d02572f5-97cc-498a-8b58-bd7ea9dccb20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{USING TOOL:}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="" x="92" y="50" width="63" height="19" uuid="ad5d85db-1427-441a-9f22-46a272ff4a18"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Location:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" x="92" y="28" width="63" height="19" uuid="50fe26b5-b8ea-4e9d-93a4-b909e33d2fca"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tool:]]></text>
+			</staticText>
+		</band>
+		<band height="82">
+			<staticText>
+				<reportElement key="" x="90" y="10" width="130" height="19" uuid="207c95cb-123a-4515-bfef-43203cf66d84"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recommendation:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement key="" x="90" y="29" width="442" height="19" uuid="98c67156-b80b-405f-a45c-4ae54798ba89">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{RECOMMENDATION:}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="104">
+			<textField>
+				<reportElement x="90" y="30" width="303" height="19" uuid="720e1327-c82f-4aab-bc14-103581a48a24"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{MF_Additional_Reference}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="90" y="78" width="446" height="19" uuid="75ba8fbb-7216-47f3-bed6-c2628a7c54f5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{References}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="" positionType="FixRelativeToBottom" x="91" y="59" width="130" height="19" uuid="b49ba859-f375-449d-99c3-e758bf19cd4c">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Further Reading:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="" positionType="FixRelativeToBottom" x="90" y="11" width="130" height="19" uuid="98ea8c84-d5d1-45c1-934d-50e3adcdd804">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Attachments/Appendix:]]></text>
+			</staticText>
+		</band>
+		<band height="536">
+			<staticText>
+				<reportElement key="" x="92" y="13" width="131" height="19" uuid="bec08fd9-d172-4764-b271-213c0ef805ee"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Screenshots:]]></text>
+			</staticText>
+			<image scaleImage="RealSize">
+				<reportElement x="90" y="32" width="400" height="230" uuid="253431fe-cbb6-48ed-a8d3-54e1ff9a34fe"/>
+				<imageExpression><![CDATA[$F{MF_IMG_PATH_1}]]></imageExpression>
+			</image>
+			<image scaleImage="RealSize">
+				<reportElement x="90" y="281" width="400" height="230" uuid="bed6b433-0b9a-4f88-9bf0-215652f33869"/>
+				<imageExpression><![CDATA[$F{MF_IMG_PATH_2}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="62" splitType="Stretch">
+			<textField>
+				<reportElement x="264" y="18" width="34" height="30" uuid="8fbf79b3-a773-4cdf-a971-eb7922a4ce00"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="298" y="18" width="100" height="30" uuid="3e42a844-c728-4c8e-b21c-4c874d534094"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of    " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="19" width="118" height="30" uuid="30ad9d0b-c155-4c8e-9966-964af0bc6ce2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Detailed Findings Page"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2015-10-08T22:45:59 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ExecutiveSummaryForInterimReport20151006" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="92221e9d-13f7-438d-85ba-aa6cbcf0c486">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Bug Tracker CSV Data Source"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="TICKET CODE:" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Related Tickets" class="java.lang.String"/>
+	<field name="FOUND BY:" class="java.lang.String"/>
+	<field name="ON DATE:" class="java.lang.String"/>
+	<field name="USING OS:" class="java.lang.String"/>
+	<field name="USING BROWSER:" class="java.lang.String"/>
+	<field name="USING TOOL:" class="java.lang.String"/>
+	<field name="BUG TYPE:" class="java.lang.String"/>
+	<field name="CATEGORY:" class="java.lang.String"/>
+	<field name="BUG TITLE:" class="java.lang.String"/>
+	<field name="BUG DESCRIPTION:" class="java.lang.String"/>
+	<field name="STEPS TO REPRODUCE:" class="java.lang.String"/>
+	<field name="RECOMMENDATION:" class="java.lang.String"/>
+	<field name="Environment" class="java.lang.String"/>
+	<field name="LOCATION/URL:" class="java.lang.String"/>
+	<field name="CVSS v2 RATING:" class="java.lang.String"/>
+	<field name="CVSSv2 Vector" class="java.lang.String"/>
+	<field name="LINK TO SCREENSHOT-1:" class="java.lang.String"/>
+	<field name="LINK TO SCREENSHOT-2:" class="java.lang.String"/>
+	<field name="LINK TO SCREENSHOT-3:" class="java.lang.String"/>
+	<field name="LINK TO LOG OR REPORT FILE-1:" class="java.lang.String"/>
+	<field name="LINK TO LOG OR REPORT FILE-2:" class="java.lang.String"/>
+	<field name="LINK TO MISC FILE:" class="java.lang.String"/>
+	<field name="NOTES:" class="java.lang.String"/>
+	<field name="References" class="java.lang.String"/>
+	<field name="MF_Additional_Reference" class="java.lang.String"/>
+	<field name="MF_IMG_PATH_1" class="java.lang.String"/>
+	<field name="MF_IMG_PATH_2" class="java.lang.String"/>
+	<field name="MF_IMG_PATH_3" class="java.lang.String"/>
+	<field name="MF_NORMALIZED_CVSSv2_RATING" class="java.lang.String"/>
+	<sortField name="cvssv2RatingNormalizedAsDouble" order="Descending" type="Variable"/>
+	<variable name="cvssv2RatingNormalizedAsDouble" class="java.lang.Double">
+		<variableExpression><![CDATA[Double.valueOf($F{MF_NORMALIZED_CVSSv2_RATING})]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="16" width="560" height="53" uuid="e1deebdc-81b2-44c3-be77-40b87c5d3cc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="32" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Executive Summary"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="560" height="19" uuid="2eaa3bd1-4042-4d67-99b0-428e85357263"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Confidential"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="90" height="30" uuid="6b30351e-5e2b-4219-8d3a-09ed59e66e4d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ticket Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="330" height="30" uuid="af822ac6-ae71-40e6-b300-e9e0789e22ad"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="85" height="30" uuid="2ae14bdc-5554-45ce-81e8-bb98df23c37c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Severity (CVSSv2) Rating]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="6" width="90" height="30" uuid="1b013577-c208-4ae0-9820-78c364d99f1a"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{TICKET CODE:}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="6" width="330" height="30" uuid="0b36f336-4223-40af-97d4-7395dc4e199f"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{BUG TITLE:}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="6" width="85" height="30" uuid="80f23658-d8d5-4e4d-8400-0a44fae7db99"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{CVSS v2 RATING:}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="72" splitType="Stretch">
+			<textField>
+				<reportElement x="254" y="31" width="34" height="30" uuid="38c8a4b6-6c15-4a01-9415-9b1954cdbd78"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="288" y="31" width="100" height="30" uuid="a92ddcf3-647f-4f49-b55a-c4211d90cc89"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of    " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="32" width="118" height="30" uuid="b918bffa-4759-4b1c-87d1-18a0ff5fad8a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Executive Summary Page"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
